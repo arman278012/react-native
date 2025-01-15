@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, FlatList, ActivityIndicator, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import ProductCard from '../components/ProductCard';
 
@@ -13,6 +13,8 @@ const HomeScreen = ({ navigation }) => {
             const response = await fetch("https://fakestoreapi.com/products");
             const data = await response.json();
             setProducts(data); // Store the fetched products
+            console.log("All products", products)
+            console.log(data)
         } catch (error) {
             console.error("Error fetching products:", error);
         } finally {
@@ -32,6 +34,9 @@ const HomeScreen = ({ navigation }) => {
 
     return (
         <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.gradient}>
+            <View style={styles.headingContainer}>
+                <Text style={styles.headingtext}>This is the Home Screen</Text>
+            </View>
             <View style={styles.container}>
                 {loading ? (
                     // Show loader while fetching data
@@ -51,7 +56,7 @@ const HomeScreen = ({ navigation }) => {
                     />
                 )}
             </View>
-        </LinearGradient>
+        </LinearGradient >
     );
 };
 
@@ -66,6 +71,14 @@ const styles = StyleSheet.create({
     row: {
         justifyContent: 'space-between',
         marginBottom: 10,
+    },
+    headingtext: {
+        color: "white",
+        fontWeight: "900",
+        textAlign: "center",
+        marginTop: 15,
+        marginBottom: 10,
+        fontSize: 18
     },
 });
 
