@@ -1795,6 +1795,16 @@
     use-latest-callback "^0.2.1"
     use-sync-external-store "^1.2.2"
 
+"@react-navigation/drawer@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.npmjs.org/@react-navigation/drawer/-/drawer-7.1.1.tgz"
+  integrity sha512-34UqRS5OLFaNXPs5ocz3Du9c7em0P7fFMPYCZn/MxadDzQ4Mn/74pmJczmiyvyvz8vcWsNRbZ3Qswm0Dv6z60w==
+  dependencies:
+    "@react-navigation/elements" "^2.2.5"
+    color "^4.2.3"
+    react-native-drawer-layout "^4.1.1"
+    use-latest-callback "^0.2.1"
+
 "@react-navigation/elements@^2.2.5":
   version "2.2.5"
   resolved "https://registry.npmjs.org/@react-navigation/elements/-/elements-2.2.5.tgz"
@@ -4970,6 +4980,13 @@ react-is@^18.2.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
+react-native-drawer-layout@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/react-native-drawer-layout/-/react-native-drawer-layout-4.1.1.tgz"
+  integrity sha512-ob6O3ph7PZ3A2FpdlsSxHuMpHDXREZPR8A6S3q0dSxV7i6d+8Z6CPCTbegfN2QZyizSow9NLrKyXP93tlqZ3dA==
+  dependencies:
+    use-latest-callback "^0.2.1"
+
 "react-native-gesture-handler@>= 2.0.0", react-native-gesture-handler@~2.20.2:
   version "2.20.2"
   resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.20.2.tgz"
@@ -4980,7 +4997,7 @@ react-is@^18.2.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-react-native-reanimated@~3.16.1:
+"react-native-reanimated@>= 2.0.0", react-native-reanimated@~3.16.1:
   version "3.16.6"
   resolved "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.16.6.tgz"
   integrity sha512-jPbAfLF5t8+UCKFTO+LeOY+OmAcDP5SsAfqINvNQz5GFGvoO7UebxujjtY58CmpZNH6c3SQ514FF9//mZDpo/g==

@@ -19,22 +19,22 @@ const ProductDetailsCard = ({ route }) => {
                 </TouchableOpacity>
             </View>
 
+            <View style={styles.categoryContainer}>
+                <Text style={styles.category}>{product.category}</Text>
+                <Text style={styles.category}>⭐{product.rating.rate}</Text>
+            </View>
+
             <View>
                 <Text style={styles.aboutTitle}>About {product.title}</Text>
                 <Text style={styles.description}>{product.description}</Text>
             </View>
-
-            <View style={styles.categoryContainer}>
-                <Text style={styles.category}>{product.category}</Text>
-                <Text>⭐{product.rating.rate}</Text>
-            </View>
-
 
         </View>
     );
 };
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         padding: 20,
@@ -63,12 +63,6 @@ const styles = StyleSheet.create({
         // textAlign: "left",
         fontWeight: "900"
     },
-    // cartButton: {
-    //     display: "flex",
-    //     color: "white",
-    //     justifyContent: "center",
-    //     alignItems: "center"
-    // },
     title: {
         fontWeight: "900",
         fontSize: 15,
@@ -104,8 +98,21 @@ const styles = StyleSheet.create({
     },
     categoryContainer: {
         display: "flex",
-        flexDirection: "row"
-    }
+        flexDirection: "row",
+        justifyContent: "center",
+        gap: 10,
+        marginBottom: 10
+    },
+    category: {
+        borderRadius: 10,
+        borderWidth: 1,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderColor: "white",
+        backgroundColor: "gray",
+        color: "white",
+        fontWeight: "500"
+    },
 });
 
 export default ProductDetailsCard;
